@@ -1,0 +1,29 @@
+<head>
+  <title>uploads</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> fileUpload}}
+  {{> showImages}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="fileUpload">
+    <input type="file" id="uploadButton" multiple />
+</template>
+
+<template name="showImages">
+
+    {{#each theImage}}
+    <div>
+        <img src="{{showImage _id}}" />
+    </div>
+    {{/each}}
+</template>
